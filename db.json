@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "zaloe",
+      "image": "./images/aloe.jpg",
+      "price": "1.21",
+      "id": 8
     }
   ]
 }
