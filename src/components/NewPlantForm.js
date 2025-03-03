@@ -3,12 +3,15 @@ import React, {useState} from "react";
 function NewPlantForm({onSubmitForm}) {
   const [formData, setFormData] = useState({name: "", image: "", price: 0});
 
+  
+  // onChange handler to update formdata state on user input
   function handleChange(e) {
     let name = e.target.name;
     let value = e.target.value;
     setFormData({...formData, [name]: value});
   }
 
+  //onsubmit handler to update plants state and update db.json
   function handleSubmit(e) {
     e.preventDefault();
     fetch("http://localhost:6001/plants", )
