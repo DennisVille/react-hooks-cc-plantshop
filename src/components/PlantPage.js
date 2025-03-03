@@ -21,13 +21,29 @@ function PlantPage() {
   function updateSearchState(item){
     setSearch(item);
   }
+  
+  function updatePriceChange(id, newPrice){
+    setPlants(prevState => prevState.map(plant =>
+      plant.id === id ? {...plant, price: newPrice} : plant
+    ));
+  } 
+
+  function deletePlant(id){
+    setPlants(prevState => prevState.filter(plant => plant.id !== id));
+  }
 
   let displayList = search.length == 0 ? plants : [...plants].filter((plant) => plant.name.includes(search));
+
+
   return (
     <main>
       <NewPlantForm onSubmitForm={updateState}/>
       <Search search = {search} onSearchChange = {updateSearchState}/>
-      <PlantList displayList = {displayList}/>
+      <PlantList 
+        displayList = {displayList} 
+        onPriceChange = {updatePriceChange} 
+        deletePlant = {deletePlant}
+      />
     </main>
   );
 }

@@ -22,7 +22,8 @@ function NewPlantForm({onSubmitForm}) {
     .then((response) => response.json())
     .then((receivedObject) => {
       console.log(receivedObject);
-      onSubmitForm(receivedObject)});
+      onSubmitForm(receivedObject)})
+    .catch(error => console.error("Error:", error));
   }
 
   return (

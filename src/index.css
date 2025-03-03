@@ -135,3 +135,16 @@ input:focus {
     width: calc(20% - 2rem);
   }
 }
+.price{
+  display: inline-block;
+  width: 70px;
+  height: 7px;
+  border: 1px solid black;
+  margin: 0px 5px;
+}
+.updateButton{
+  background-color: var(--green);
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
